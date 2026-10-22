@@ -1,0 +1,973 @@
+/* ==========================================
+   1. RESET & PALETA IDENTIDADE NATART
+   ========================================== */
+
+html {
+    font-size: 16px;
+    overflow-y: scroll;
+}
+
+/* Corrigido o seletor universal de '-' para '*' */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #2b2226;
+    background-color: #fdf8f9; /* Fundo off-white levemente rosado */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img,
+picture,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ==========================================
+   2. HOMEPAGE - HERO & DESTAQUES
+   ========================================== */
+
+/* Apresentação Principal (Hero Section) */
+.hero-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+    width: 100%;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h1 {
+    font-size: 2.5rem;
+    color: #8f4058; /* Tom vinho/rosa da marca */
+    margin-bottom: 15px;
+}
+
+.hero-texto p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #55444c;
+}
+
+/* Retrato Principal da Nat */
+.hero-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-imagem .img-hero {
+    max-width: 280px;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(143, 64, 88, 0.12);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Botão de Ação na Homepage */
+.btn-cta {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #8f4058;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cta:hover {
+    background-color: #703043;
+    transform: translateY(-2px);
+}
+
+/* Área para as 3 fotos em destaque */
+.destaques-secao {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.destaques-secao h2 {
+    color: #8f4058;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ==========================================
+   3. CABEÇALHO & LOGO
+   ========================================== */
+
+.header,
+.header-principal {
+    width: 100%;
+    min-height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 25px;
+    background-color: #ffffff;
+    color: #2b2226;
+    border-bottom: 2px solid #f2e3e7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.logo-header,
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #8f4058;
+}
+
+.logo-img {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-subtitle {
+    display: block;
+    margin-top: 1px;
+    font-size: 13px;
+    line-height: 1;
+    color: #b58090;
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   4. MENU DE NAVEGAÇÃO
+   ========================================== */
+
+.nav-menu,
+.menu-navegacao ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a,
+.menu-navegacao a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #52313d;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    font-style: italic;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active,
+.menu-navegacao a:hover,
+.menu-navegacao a.active {
+    color: #c86b85;
+    background-color: #fceef2;
+}
+
+
+/* ==========================================
+   5. SEÇÃO SOBRE (FOTO & TEXTO ANIMADO)
+   ========================================== */
+
+.sobre-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.sobre-foto {
+    flex: 0 0 280px;
+    max-width: 280px;
+    position: relative;
+    z-index: 2;
+}
+
+.sobre-foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #f2e3e7;
+    box-shadow: 0 8px 20px rgba(143, 64, 88, 0.12);
+    object-fit: cover;
+}
+
+.sobre-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    animation: surgirDeTras 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.sobre-texto h2 {
+    font-size: 2rem;
+    color: #8f4058;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', serif;
+}
+
+.sobre-texto p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #52313d;
+}
+
+@keyframes surgirDeTras {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+
+/* ==========================================
+   6. CARROSSEL PREMIUM
+   ========================================== */
+
+.galeria-section {
+    width: 100%;
+    max-width: 950px;
+    margin: 10px auto 30px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.galeria-section h2 {
+    font-size: 2.2rem;
+    color: #8f4058;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', serif;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #fbf2f4, #ffffff);
+    box-shadow: 0 10px 30px rgba(143, 64, 88, 0.08);
+    border: 1px solid #f2dbe1;
+    transition: box-shadow 0.3s ease;
+}
+
+.carousel-container:hover {
+    box-shadow: 0 15px 40px rgba(143, 64, 88, 0.15);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 25px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide img {	
+    max-width: 100%;
+    max-height: 560px;
+    object-fit: contain;
+    border-radius: 10px;
+    filter: drop-shadow(0 6px 14px rgba(143, 64, 88, 0.12));
+}
+
+.slide-caption {
+    margin-top: 18px;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.slide-caption h3 {
+    margin: 0 0 4px 0;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.5rem;
+    color: #52313d;
+    font-weight: 700;
+}
+
+.slide-caption p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #8f6875;
+    font-style: italic;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    color: #8f4058;
+    border: 1px solid #f2dbe1;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(143, 64, 88, 0.1);
+    transition: all 0.25s ease;
+}
+
+.carousel-btn:hover {
+    background: #8f4058;
+    color: #ffffff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    background-color: #ebccd4;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dot.active {
+    width: 28px;
+    background-color: #8f4058;
+}
+
+
+/* ==========================================
+   7. CONTATO
+   ========================================== */
+
+.contato-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.form-contato {
+    flex: 1.2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #8f4058;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 16px 18px;
+    font-size: 1.05rem;
+    color: #2b2226;
+    background-color: #ffffff;
+    border: 1.5px solid #f2dbe1;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(143, 64, 88, 0.04);
+}
+
+.campo textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #8f4058;
+    box-shadow: 0 0 0 4px rgba(143, 64, 88, 0.12);
+}
+
+.btn-enviar {
+    padding: 16px 32px;
+    background-color: #8f4058;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #c86b85;
+    transform: translateY(-2px);
+}
+
+.contato-info {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato-info img {
+    max-width: 320px;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: center 13%;
+    border-radius: 12px;
+    filter: brightness(1.05) contrast(0.95);
+}
+
+
+/* ==========================================
+   8. RODAPÉ & INSTAGRAM
+   ========================================== */
+
+footer,
+.footer,
+.footer-principal {
+    width: 100%;
+    margin-top: auto;
+    padding: 35px 20px 25px 20px;
+    text-align: center;
+    background-color: #3b232c;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Botão Siga no Instagram */
+.btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fceef2;
+    color: #d81b60;
+    padding: 10px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-instagram:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-instagram svg,
+.btn-instagram i {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Texto de Direitos Autoriais */
+footer p,
+.footer p,
+.footer-principal p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #e8d7dd;
+    letter-spacing: 0.2px;
+}
+
+
+/* ==========================================
+   9. RESPONSIVIDADE (DISPOSITIVOS MÓVEIS)
+   ========================================== */
+
+@media (max-width: 768px) {
+    .header,
+    .header-principal {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 15px;
+    }
+
+    .logo-subtitle {
+        display: none;
+    }
+
+    .nav-menu,
+    .menu-navegacao ul {
+        gap: 12px;
+    }
+
+    .nav-menu a,
+    .menu-navegacao a {
+        font-size: 14px;
+    }
+
+    .hero-principal {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .sobre-foto {
+        max-width: 220px;
+    }
+
+    .sobre-texto {
+        align-items: center;
+        text-align: center;
+    }
+
+    .carousel-slide img {
+        max-height: 400px;
+    }
+
+    .carousel-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .contato-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+}
+
+
+
+/* ==========================================
+   PORTFÓLIO - OPÇÃO 1: GRID (GALERIA)
+   ========================================== */
+
+.portfolio-section {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    font-size: 2.2rem;
+    color: #8f4058;
+    font-family: 'Times New Roman', serif;
+}
+
+.portfolio-subtitulo {
+    color: #8f6875;
+    margin-bottom: 35px;
+    font-style: italic;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #f2dbe1;
+    box-shadow: 0 4px 15px rgba(143, 64, 88, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(143, 64, 88, 0.15);
+}
+
+.portfolio-img-container {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background-color: #fbf2f4;
+}
+
+.portfolio-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    padding: 18px 15px;
+    text-align: center;
+}
+
+.portfolio-info h3 {
+    font-size: 1.2rem;
+    color: #52313d;
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 6px;
+}
+
+.portfolio-info p {
+    font-size: 0.9rem;
+    color: #8f6875;
+    font-style: italic;
+}
+
+.portfolio-cta {
+    margin-top: 45px;
+}
+
+/* ==========================================
+   EFEITO ANTES E DEPOIS (PROCESSO CRIATIVO)
+   ========================================== */
+
+.portfolio-img-container {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background-color: #fbf2f4;
+}
+
+/* Configuração comum para ambas as imagens */
+.portfolio-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* A imagem "depois" (arte final) fica visível por cima */
+.portfolio-img-container .img-depois {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* A imagem "antes" (processo) fica oculta por baixo */
+.portfolio-img-container .img-antes {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* AO PASSAR O RATO (HOVER): Inverte a opacidade suavemente */
+.portfolio-card:hover .img-depois {
+    opacity: 0;
+}
+
+.portfolio-card:hover .img-antes {
+    opacity: 1;
+}
+
+/* Tag indicativa discreta no canto */
+.badge-processo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(59, 35, 44, 0.8);
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .badge-processo {
+    opacity: 0;
+}
+
+/* ==========================================
+   GALERIA DE ETAPAS MÚLTIPLAS (BASE)
+   ========================================== */
+
+.portfolio-img-container.galeria-etapas {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #fbf2f4;
+}
+
+.portfolio-img-container.galeria-etapas img.etapa-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center; /* Padrão central */
+    transform: scale(1); /* Tamanho padrão base */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, transform 0.3s ease;
+}
+
+.portfolio-img-container.galeria-etapas img.etapa-img.active {
+    opacity: 1;
+}
+
+
+/* ==========================================
+   AJUSTES INDIVIDUAIS POR OBRA (1 a 20)
+   Altere o scale para o zoom e o object-position para subir/descer
+   ========================================== */
+
+/* ==========================================
+	AJUSTE DA ARTE (REUNIAO DE PAIS)
+   ========================================== */
+.portfolio-grid .portfolio-card:nth-child(1) img[src$="arte1.jpg"] {
+    object-fit: contain;
+    object-position: center center;
+    transform: scale(1);
+    background-color: #fbf2f4;
+}
+
+.portfolio-grid .portfolio-card:nth-child(1) .etapa-img {
+	object-fit: cover;
+    object-position: center center;
+    transform: scale(1);
+	background-color: #fbf2f4;
+}
+/* ==========================================
+	AJUSTE DA ARTE (Maternidade e o Florescer de Outra Mulher)
+   ========================================== */
+.portfolio-grid .portfolio-card:nth-child(2) .etapa-img {
+   	object-fit: cover;
+    object-position: center center;
+    transform: scale(1);
+	background-color: #fbf2f4;
+}
+
+/* Arte 3 */
+.portfolio-grid .portfolio-card:nth-child(3) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
+
+/* Arte 4 */
+.portfolio-grid .portfolio-card:nth-child(4) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
+
+/* Arte 5 */
+.portfolio-grid .portfolio-card:nth-child(5) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
+
+/* Arte 6 */
+.portfolio-grid .portfolio-card:nth-child(6) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
+
+/* Arte 7 */
+.portfolio-grid .portfolio-card:nth-child(7) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
+
+/* Arte 8 */
+.portfolio-grid .portfolio-card:nth-child(8) .etapa-img {
+    object-position: center 50%;
+    transform: scale(0.99);
+}
+
+/* Arte 9 */
+.portfolio-grid .portfolio-card:nth-child(9) .etapa-img {
+    object-position: center 50%;
+    transform: scale(1.0);
+}
+
+/* Arte 10 */
+.portfolio-grid .portfolio-card:nth-child(10) .etapa-img {
+    object-position: center 55%;
+    transform: scale(1.0);
+}
+
+/* Arte 11 */
+.portfolio-grid .portfolio-card:nth-child(11) .etapa-img {
+    object-position: center 50%;
+    transform: scale(1.0);
+}
+
+/* Arte 12 */
+.portfolio-grid .portfolio-card:nth-child(12) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
+
+/* Arte 13 */
+.portfolio-grid .portfolio-card:nth-child(13) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
+
+/* Arte 14 */
+.portfolio-grid .portfolio-card:nth-child(14) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
+
+/* Arte 15 */
+.portfolio-grid .portfolio-card:nth-child(15) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
+
+/* Arte 16 */
+.portfolio-grid .portfolio-card:nth-child(16) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
+
+/* Arte 17 */
+.portfolio-grid .portfolio-card:nth-child(17) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.20);
+}
+
+/* Arte 18 */
+.portfolio-grid .portfolio-card:nth-child(18) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
+
+/* Arte 19 */
+.portfolio-grid .portfolio-card:nth-child(19) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.08);
+}
+
+/* Arte 20 */
+.portfolio-grid .portfolio-card:nth-child(20) .etapa-img {
+    object-position: center 40%;
+    transform: scale(1.0);
+}
